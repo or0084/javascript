@@ -4,8 +4,8 @@ const API_KEY = "8370073cc64071b8cad7f32948afbcf8";
 $(function(){
   $('#btn').on('click',function(){
     $.ajax({
-      url: "https://api.openweathermap.org/data/2.5/weather?q=" + $('#cityname').val() + "&units=metric&appid=" + API_KEY,
-      dataType : 'jsonp',
+      url:"https://api.openweathermap.org/data/2.5/weather?q=" + $('#cityname').val() + "&units=metric&appid=" + API_KEY,
+      dataType:'jsonp',
     }).done(function(data){
       $('#place').text(data.name);
       $('#temp_max').text(data.main.temp_max);
